@@ -1,4 +1,6 @@
 import "../styles/main.css";
+import "remixicon/fonts/remixicon.css";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
