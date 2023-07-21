@@ -172,27 +172,11 @@ aside {
   height: 70px;
 }
 
-aside ul {
-  margin: 0;
-  padding: 1em;
-}
-aside li {
-  width: 100%;
-  height: 50px;
-  padding: 0.8em 1em;
-  border-radius: 10px;
+nav {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5em;
-  cursor: pointer;
-  z-index: 2;
-}
-aside li.active {
-  color: #e8b225;
-}
-aside li i {
-  font-size: 1.3em;
+  flex-direction: column;
+  padding: 2em;
+  gap: 1em;
 }
 
 .menu-items-wrapper {
