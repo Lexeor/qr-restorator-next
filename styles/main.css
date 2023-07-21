@@ -19,7 +19,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 250px 1fr;
   grid-template-rows: 70px 1fr;
 }
 
@@ -35,6 +35,9 @@ hr {
 a {
   all: unset;
   cursor: pointer;
+}
+a.active {
+  color: #e8b225;
 }
 
 h2 {
@@ -160,7 +163,7 @@ input[type=password]:focus {
 }
 
 aside {
-  width: 200px;
+  width: 100%;
   color: #959595;
   grid-row-start: span 2;
 }
@@ -175,32 +178,21 @@ aside {
 nav {
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  width: 100%;
+  padding: 1em;
   gap: 1em;
 }
 
-.menu-items-wrapper {
-  position: relative;
-}
-
-.selector-wrapper {
-  position: absolute;
-  top: 1em;
-  left: 1em;
-  width: calc(100% - 2em);
-  padding: 1em;
-  display: grid;
-  transition: all 1s ease-in-out;
-}
-
-.selector {
-  background-color: rgba(42, 42, 42, 0.4);
-  pointer-events: none;
-  color: #e8b225;
-  height: 50px;
-  width: 100%;
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1em 2em;
   border-radius: 10px;
-  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.menu-item.active, .menu-item:hover {
+  background-color: #2a2a2a;
 }
 
 header {
