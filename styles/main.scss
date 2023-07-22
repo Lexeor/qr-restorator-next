@@ -93,6 +93,7 @@ main {
   transition: all 0.3s ease-in-out;
   height: -webkit-fill-available;
   overflow: hidden;
+  overflow-y: scroll;
   border-radius: $border-radius-l 0 0 0;
   // Safari fix
   -webkit-mask-image: -webkit-radial-gradient(white, black);
