@@ -16,14 +16,14 @@ nav {
   flex-direction: column;
   width: 100%;
   padding: 1em;
-  gap: 1em;
+  gap: 5px;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 1em 2em;
+  padding: 0.8em 2em;
   border-radius: $border-radius-s;
   transition: all 0.3s ease-in-out;
 
