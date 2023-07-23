@@ -1,7 +1,9 @@
 import React from "react";
-import { Typography, Stack, Card } from "@mui/material";
+import { Typography, Stack, Card, Button, Grid } from "@mui/material";
+import { Add } from "@mui/icons-material";
 import { Metadata } from "next";
 import Link from "next/link";
+import DishCard from "@/components/DishCard/DishCard";
 
 async function getProducts() {
   const response = await fetch("https://dummyjson.com/products", {
@@ -23,13 +25,9 @@ async function Dishes() {
   const renderItems =
     response.products.length > 0 ? (
       response.products.map((item) => (
-        <Card key={item.id}>
-          <Link href={`/dishes/${item.id}`}>
-            {item.title}
-            <br />
-            {item.category}
-          </Link>
-        </Card>
+        <Grid item lg={2} md={4} sm={6} xs={12} key={item.id}>
+          <DishCard item={item} />
+        </Grid>
       ))
     ) : (
       <div>Not found.</div>
@@ -37,10 +35,20 @@ async function Dishes() {
 
   return (
     <>
-      <Typography variant="h5">Dishes</Typography>
-      <Stack direction="column" gap={1}>
-        {renderItems}
+      <Stack
+        direction={"row"}
+        gap={1}
+        marginBottom={"1em"}
+        justifyContent={"space-between"}
+      >
+        <Typography variant="h5">Dishes</Typography>
+        <Button startIcon={<Add />} color={"success"} variant={"contained"}>
+          <Link href="/dishes/new">Add new dish</Link>
+        </Button>
       </Stack>
+      <Grid container spacing={2}>
+        {renderItems}
+      </Grid>
     </>
   );
 }

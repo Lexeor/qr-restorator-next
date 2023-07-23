@@ -1,0 +1,23 @@
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: $border-radius-m;
+  overflow: hidden;
+  border: 1px solid $color-gray;
+  height: 220px;
+  background-color: $color-white;
+  padding-bottom: 1em;
+
+  img {
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1em;
+  }
+
+  strong {
+    flex-grow: 1;
+    padding: 0 1em;
+  }
+}
