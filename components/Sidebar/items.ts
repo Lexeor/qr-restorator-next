@@ -10,7 +10,7 @@ const items: MenuItem[] = [
   { id: 1, path: "/tables", title: "Tables", icon: "TableRestaurant" },
   { id: 2, path: "/menu", title: "Menu", icon: "RestaurantMenu" },
   { id: 4, path: "/dishes", title: "Dishes", icon: "BrunchDining" },
-  { id: 5, path: "/reports", title: "Reports", icon: "Assessment" },
+  { id: 5, path: "/reports", title: "Reports", icon: "Stats" },
   { id: 6, path: "/restaurant", title: "Restaurant", icon: "Storefront" },
 ];
 
