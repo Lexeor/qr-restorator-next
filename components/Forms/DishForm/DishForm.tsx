@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Grid, TextField } from "@mui/material";
 import { useForm, Form } from "../../../hooks/useForm";
+import Controls from "../controls/Controls";
 
 type DishFormProps = {
   dish?: {
@@ -23,7 +24,9 @@ const initialValues = {
 };
 
 function DishForm({ dish }: DishFormProps) {
-  const { values, setValues, handleInputChange } = useForm({ initialValues });
+  const { values, setValues, handleInputChange, handleSelectChange } = useForm({
+    initialValues,
+  });
 
   return (
     <Form>
@@ -48,6 +51,18 @@ function DishForm({ dish }: DishFormProps) {
           label="Price"
           value={values.price}
           onChange={handleInputChange}
+        />
+        <Controls.Select
+          name="categoryId"
+          label="Category"
+          value={values.categoryId}
+          onChange={handleSelectChange}
+          options={[
+            { id: 0, name: "Breakfast" },
+            { id: 1, name: "Main" },
+            { id: 2, name: "Soup" },
+            { id: 3, name: "Salad" },
+          ]}
         />
       </Grid>
     </Form>

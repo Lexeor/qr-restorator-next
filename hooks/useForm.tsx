@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SelectChangeEvent } from "@mui/material/Select";
 
 type UseFormProps = {
   initialValues: {
@@ -21,7 +22,15 @@ function useForm({ initialValues }: UseFormProps) {
     });
   };
 
-  return { values, setValues, handleInputChange };
+  const handleSelectChange = (e: SelectChangeEvent) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
+
+  return { values, setValues, handleInputChange, handleSelectChange };
 }
 
 export default function Form({ children }: { children: React.ReactNode }) {
