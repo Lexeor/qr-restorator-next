@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderContent from "@/components/HeaderContent/HeaderContent";
 
 async function getProducts(id: string) {
   const response = await fetch(`https://dummyjson.com/products/${id}`, {
@@ -21,7 +22,7 @@ async function DishDetails({ params: { id } }: Props) {
 
   return (
     <>
-      <div>Dish Details {id}</div>
+      <HeaderContent title={dish.title} backButton></HeaderContent>
       <p>{dish.title}</p>
       <p>{dish.category}</p>
       <p>{dish.description}</p>

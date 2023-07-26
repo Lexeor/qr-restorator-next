@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography, Stack, Card, Button, Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { Add } from "@mui/icons-material";
 import { Metadata } from "next";
 import Link from "next/link";
 import DishCard from "@/components/DishCard/DishCard";
+import HeaderContent from "@/components/HeaderContent/HeaderContent";
 
 async function getProducts() {
   const response = await fetch("https://dummyjson.com/products", {
@@ -35,17 +36,11 @@ async function Dishes() {
 
   return (
     <>
-      <Stack
-        direction={"row"}
-        gap={1}
-        marginBottom={"1em"}
-        justifyContent={"space-between"}
-      >
-        <Typography variant="h5">Dishes</Typography>
+      <HeaderContent title={"Dishes"}>
         <Button startIcon={<Add />} color={"success"} variant={"contained"}>
           <Link href="/dishes/new">Add new dish</Link>
         </Button>
-      </Stack>
+      </HeaderContent>
       <Grid container spacing={2}>
         {renderItems}
       </Grid>

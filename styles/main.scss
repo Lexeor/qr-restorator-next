@@ -119,6 +119,22 @@ button {
   }
 }
 
+.btn-back {
+  background-color: $color-gray;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0;
+
+  svg {
+    transform: translateX(10px);
+  }
+}
+
 // Inputs
 input[type="text"],
 input[type="password"] {
@@ -146,3 +162,4 @@ input[type="password"]:focus {
 @import "./sidebar";
 @import "./header";
 @import "./cards";
+@import "./header-content";

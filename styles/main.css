@@ -101,6 +101,21 @@ button {
   font-size: 1.2rem;
 }
 
+.btn-back {
+  background-color: #eeeeee;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0;
+}
+.btn-back svg {
+  transform: translateX(10px);
+}
+
 input[type=text],
 input[type=password] {
   width: 100%;
@@ -239,4 +254,10 @@ header {
 .dish-card strong {
   flex-grow: 1;
   padding: 0 1em;
+}
+
+.header-content_title-area {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }/*# sourceMappingURL=main.css.map */
