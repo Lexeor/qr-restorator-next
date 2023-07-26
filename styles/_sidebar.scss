@@ -2,6 +2,8 @@ aside {
   width: 100%;
   color: $text-light-faded;
   grid-row-start: span 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-logo {
@@ -30,5 +32,19 @@ nav {
   &.active,
   &:hover {
     background-color: $color-secondary;
+  }
+}
+
+.sidebar-bottom {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1em;
+
+  botton {
+    color: $color-primary;
   }
 }

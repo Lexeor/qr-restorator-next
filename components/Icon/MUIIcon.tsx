@@ -10,8 +10,8 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 const Icons = {
   Dashboard: DashboardIcon,
   TableRestaurant: TableRestaurantIcon,
-  RestaurantMenu: RestaurantMenuIcon,
-  BrunchDining: MenuBookIcon,
+  RestaurantMenu: MenuBookIcon,
+  BrunchDining: RestaurantMenuIcon,
   Stats: BarChartIcon,
   Storefront: StorefrontIcon,
 };

@@ -166,6 +166,8 @@ aside {
   width: 100%;
   color: #959595;
   grid-row-start: span 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-logo {
@@ -193,6 +195,19 @@ nav {
 }
 .menu-item.active, .menu-item:hover {
   background-color: #2a2a2a;
+}
+
+.sidebar-bottom {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1em;
+}
+.sidebar-bottom botton {
+  color: #e8b225;
 }
 
 header {
