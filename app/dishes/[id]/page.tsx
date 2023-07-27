@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderContent from "@/components/HeaderContent/HeaderContent";
+import DishForm from "@/components/Forms/DishForm/DishForm";
 
 async function getProducts(id: string) {
   const response = await fetch(`https://dummyjson.com/products/${id}`, {
@@ -23,11 +24,13 @@ async function DishDetails({ params: { id } }: Props) {
   return (
     <>
       <HeaderContent title={dish.title} backButton></HeaderContent>
-      <p>{dish.title}</p>
-      <p>{dish.category}</p>
-      <p>{dish.description}</p>
-      <p>Rating: {dish.rating}</p>
-      <p>Price: ${dish.price}</p>
+      <DishForm dish={{
+        id: dish.id,
+        name: dish.title,
+        description: dish.description,
+        categoryId: dish.rating.toString(),
+        price: dish.price,
+        }}/>
     </>
   );
 }

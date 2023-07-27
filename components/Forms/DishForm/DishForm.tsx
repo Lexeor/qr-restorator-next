@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { Grid, TextField } from "@mui/material";
+import React, { useEffect } from "react";
+import { Grid, TextField, Button } from "@mui/material";
 import { useForm, Form } from "../../../hooks/useForm";
 import Controls from "../controls/Controls";
 
@@ -27,6 +27,12 @@ function DishForm({ dish }: DishFormProps) {
   const { values, setValues, handleInputChange, handleSelectChange } = useForm({
     initialValues,
   });
+
+  useEffect(() => {
+    if(dish) {
+      setValues(dish);
+    }
+  }, []);
 
   return (
     <Form>
@@ -64,6 +70,7 @@ function DishForm({ dish }: DishFormProps) {
             { id: 3, name: "Salad" },
           ]}
         />
+      <Button variant={"contained"}>{dish ? "Update" : "Add"}</Button>
       </Grid>
     </Form>
   );
