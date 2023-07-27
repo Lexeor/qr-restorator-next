@@ -40,6 +40,7 @@ function DishForm({ dish }: DishFormProps) {
         <TextField
           name="name"
           variant="outlined"
+          size="small"
           label="Name"
           value={values.name}
           onChange={handleInputChange}
@@ -47,6 +48,7 @@ function DishForm({ dish }: DishFormProps) {
         <TextField
           name="description"
           variant="outlined"
+          size="small"
           label="Description"
           value={values.description}
           onChange={handleInputChange}
@@ -54,6 +56,7 @@ function DishForm({ dish }: DishFormProps) {
         <TextField
           name="price"
           variant="outlined"
+          size="small"
           label="Price"
           value={values.price}
           onChange={handleInputChange}

@@ -20,7 +20,7 @@ function Select(props: Props) {
   const { name, label, value, onChange, options } = props;
 
   return (
-    <FormControl variant="outlined">
+    <FormControl variant="outlined" size="small">
       <InputLabel>{label}</InputLabel>
       <MuiSelect label={label} name={name} value={value} onChange={onChange}>
         <MenuItem value="">None</MenuItem>

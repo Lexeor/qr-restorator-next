@@ -115,6 +115,9 @@ button {
 .btn-back svg {
   transform: translateX(10px);
 }
+.btn-back:hover {
+  background-color: #d1d1d1;
+}
 
 .login-wrapper {
   width: 100vw;
