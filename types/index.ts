@@ -18,3 +18,17 @@ export type DishResponse = {
   skip: number;
   limit: number;
 };
+
+export type DishCategory = {
+  id: number;
+  name: string;
+};
+
+export type Dish = {
+  id: number;
+  description: string;
+  name: string;
+  category: DishCategory;
+  price: number;
+  image: string;
+};

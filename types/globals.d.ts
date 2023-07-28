@@ -21,4 +21,18 @@ declare global {
     skip: number;
     limit: number;
   };
+
+  type DishCategory = {
+    id: number;
+    name: string;
+  };
+
+  type Dish = {
+    id: number;
+    description: string;
+    name: string;
+    category: DishCategory;
+    price: number;
+    image: string;
+  };
 }
