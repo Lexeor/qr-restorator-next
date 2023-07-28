@@ -4,14 +4,14 @@ import { Button } from "@mui/material";
 import { Edit } from "@mui/icons-material";
 
 type Props = {
-  item: Product;
+  item: Dish;
 };
 
-function DishCard({ item: { id, title, thumbnail } }: Props) {
+function DishCard({ item: { id, name, image } }: Props) {
   return (
     <div className="dish-card">
-      <img src={thumbnail} />
-      <strong>{title}</strong>
+      <img src={image} />
+      <strong>{name}</strong>
       <Button startIcon={<Edit />}>
         <Link href={`/dishes/${id}`}>Edit dish</Link>
       </Button>

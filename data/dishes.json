@@ -1,103 +1,101 @@
-{
-  "items": [
-    {
+[
+  {
+    "id": 1,
+    "description": "Menemen",
+    "name": "Menemen",
+    "category": {
       "id": 1,
-      "description": "Menemen",
-      "name": "Menemen",
-      "category": {
-        "id": 1,
-        "name": "Breakfast"
-      },
-      "price": 100.0,
-      "image": "/media/items/images/menemen.png"
+      "name": "Breakfast"
     },
-    {
+    "price": 100.0,
+    "image": "/media/items/images/menemen.png"
+  },
+  {
+    "id": 2,
+    "description": "Sandwich",
+    "name": "Sandwich",
+    "category": {
+      "id": 1,
+      "name": "Breakfast"
+    },
+    "price": 120.0,
+    "image": "/media/items/images/sandwich.jpg"
+  },
+  {
+    "id": 3,
+    "description": "Egg, Hash Brown & Bacon Breakfast Skillet",
+    "name": "Egg, Hash Brown & Bacon Breakfast Skillet",
+    "category": {
+      "id": 1,
+      "name": "Breakfast"
+    },
+    "price": 250.0,
+    "image": "/media/items/images/egg_hashbrown.jpg"
+  },
+  {
+    "id": 7,
+    "description": "Tavuk Şiş",
+    "name": "Tavuk Şiş",
+    "category": {
       "id": 2,
-      "description": "Sandwich",
-      "name": "Sandwich",
-      "category": {
-        "id": 1,
-        "name": "Breakfast"
-      },
-      "price": 120.0,
-      "image": "/media/items/images/sandwich.jpg"
+      "name": "Main"
     },
-    {
+    "price": 100.0,
+    "image": "/media/items/images/tavuk-shish.jpg"
+  },
+  {
+    "id": 8,
+    "description": "Adana Kebap",
+    "name": "Adana Kebap",
+    "category": {
+      "id": 2,
+      "name": "Main"
+    },
+    "price": 120.0,
+    "image": "/media/items/images/adana-kebap.jpg"
+  },
+  {
+    "id": 9,
+    "description": "Kuzu Şiş",
+    "name": "Kuzu Şiş",
+    "category": {
+      "id": 2,
+      "name": "Main"
+    },
+    "price": 115.0,
+    "image": "/media/items/images/kuzusis.jpg"
+  },
+  {
+    "id": 4,
+    "description": "Çorba",
+    "name": "Çorba",
+    "category": {
       "id": 3,
-      "description": "Egg, Hash Brown & Bacon Breakfast Skillet",
-      "name": "Egg, Hash Brown & Bacon Breakfast Skillet",
-      "category": {
-        "id": 1,
-        "name": "Breakfast"
-      },
-      "price": 250.0,
-      "image": "/media/items/images/egg_hashbrown.jpg"
+      "name": "Soup"
     },
-    {
-      "id": 7,
-      "description": "Tavuk Şiş",
-      "name": "Tavuk Şiş",
-      "category": {
-        "id": 2,
-        "name": "Main"
-      },
-      "price": 100.0,
-      "image": "/media/items/images/tavuk-shish.jpg"
+    "price": 80.0,
+    "image": "/media/items/images/chorba_b29xHFd.png"
+  },
+  {
+    "id": 6,
+    "description": "Mushroom Soup",
+    "name": "Mushroom Soup",
+    "category": {
+      "id": 3,
+      "name": "Soup"
     },
-    {
-      "id": 8,
-      "description": "Adana Kebap",
-      "name": "Adana Kebap",
-      "category": {
-        "id": 2,
-        "name": "Main"
-      },
-      "price": 120.0,
-      "image": "/media/items/images/adana-kebap.jpg"
-    },
-    {
-      "id": 9,
-      "description": "Kuzu Şiş",
-      "name": "Kuzu Şiş",
-      "category": {
-        "id": 2,
-        "name": "Main"
-      },
-      "price": 115.0,
-      "image": "/media/items/images/kuzusis.jpg"
-    },
-    {
+    "price": 90.0,
+    "image": "/media/items/images/soup-mushroom.jpg"
+  },
+  {
+    "id": 5,
+    "description": "Greek Salad",
+    "name": "Greek Salad",
+    "category": {
       "id": 4,
-      "description": "Çorba",
-      "name": "Çorba",
-      "category": {
-        "id": 3,
-        "name": "Soup"
-      },
-      "price": 80.0,
-      "image": "/media/items/images/chorba_b29xHFd.png"
+      "name": "Salad"
     },
-    {
-      "id": 6,
-      "description": "Mushroom Soup",
-      "name": "Mushroom Soup",
-      "category": {
-        "id": 3,
-        "name": "Soup"
-      },
-      "price": 90.0,
-      "image": "/media/items/images/soup-mushroom.jpg"
-    },
-    {
-      "id": 5,
-      "description": "Greek Salad",
-      "name": "Greek Salad",
-      "category": {
-        "id": 4,
-        "name": "Salad"
-      },
-      "price": 120.0,
-      "image": "/media/items/images/greek.png"
-    }
-  ]
-}
+    "price": 120.0,
+    "image": "/media/items/images/greek.png"
+  }
+]

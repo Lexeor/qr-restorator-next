@@ -6,26 +6,29 @@ import Link from "next/link";
 import DishCard from "@/components/DishCard/DishCard";
 import HeaderContent from "@/components/HeaderContent/HeaderContent";
 
-async function getProducts() {
-  const response = await fetch("https://dummyjson.com/products", {
-    next: {
-      revalidate: 60,
-    },
-  });
+// mock
+import { getLocalProducts } from "../../utils/localdata";
 
-  return response.json();
-}
+// async function getProducts() {
+//   const response = await fetch("https://dummyjson.com/products", {
+//     next: {
+//       revalidate: 60,
+//     },
+//   });
+
+//   return response.json();
+// }
 
 export const metadata: Metadata = {
   title: "Dishes",
 };
 
 async function Dishes() {
-  const response: DishResponse = await getProducts();
+  const response: Dish[] = await getLocalProducts();
 
   const renderItems =
-    response.products.length > 0 ? (
-      response.products.map((item) => (
+    response.length > 0 ? (
+      response.map((item) => (
         <Grid item lg={2} md={4} sm={6} xs={12} key={item.id}>
           <DishCard item={item} />
         </Grid>

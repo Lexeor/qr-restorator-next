@@ -2,15 +2,18 @@ import React from "react";
 import HeaderContent from "@/components/HeaderContent/HeaderContent";
 import DishForm from "@/components/Forms/DishForm/DishForm";
 
-async function getProducts(id: string) {
-  const response = await fetch(`https://dummyjson.com/products/${id}`, {
-    next: {
-      revalidate: 60,
-    },
-  });
+// mock
+import { getLocalProducts } from "../../../utils/localdata";
 
-  return response.json();
-}
+// async function getProducts(id: string) {
+//   const response = await fetch(`https://dummyjson.com/products/${id}`, {
+//     next: {
+//       revalidate: 60,
+//     },
+//   });
+
+//   return response.json();
+// }
 
 type Props = {
   params: {
@@ -19,18 +22,20 @@ type Props = {
 };
 
 async function DishDetails({ params: { id } }: Props) {
-  const dish: Product = await getProducts(id);
+  const dish: Dish[] = await getLocalProducts(Number(id));
 
   return (
     <>
-      <HeaderContent title={dish.title} backButton></HeaderContent>
-      <DishForm dish={{
-        id: dish.id,
-        name: dish.title,
-        description: dish.description,
-        categoryId: dish.rating.toString(),
-        price: dish.price,
-        }}/>
+      <HeaderContent title={dish[0].name} backButton></HeaderContent>
+      <DishForm
+        dish={{
+          id: dish[0].id,
+          name: dish[0].name,
+          description: dish[0].description,
+          categoryId: dish[0].category.id.toString(),
+          price: dish[0].price,
+        }}
+      />
     </>
   );
 }
