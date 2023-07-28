@@ -12,7 +12,6 @@ export async function getLocalProducts(id?: number) {
   if (!id) {
     return objectData;
   } else {
-    objectData.filter((item) => item.id === id);
-    return objectData;
+    return objectData.filter((item) => item.id === id);
   }
 }
