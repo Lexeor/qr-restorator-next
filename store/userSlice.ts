@@ -5,7 +5,12 @@ const initialState = {
   id: 1,
   name: "Lexeor",
   token: "123qwe",
-  restaurant: null as RestaurantType,
+  restaurant: {
+    id: 1,
+    name: "Test Restaurant #1",
+    address: "Test Street 1, 25, lit B",
+    menu: 1,
+  } as RestaurantType,
 } as UserType;
 
 const userSlice = createSlice({
