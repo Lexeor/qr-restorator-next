@@ -1,29 +1,23 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-type InitialStateType = {
-  id: number;
-  name: string;
-  token: string;
-  restaurantId: number;
-};
+import { UserType, RestaurantType } from "./types";
 
 const initialState = {
   id: 1,
   name: "Lexeor",
   token: "123qwe",
-  restaurantId: 1,
-} as InitialStateType;
+  restaurant: null as RestaurantType,
+} as UserType;
 
 const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
     set: (state, action) => {
-      let { id, name, token, restaurantId } = action.payload;
+      let { id, name, token, restaurant } = action.payload;
       state.id = id;
       state.name = name;
       state.token = token;
-      state.restaurantId = restaurantId;
+      state.restaurant = restaurant;
     },
   },
 });
