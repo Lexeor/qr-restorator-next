@@ -6,11 +6,14 @@ import { usePathname } from "next/navigation";
 import menuItems from "./items";
 import { IconNames, IconComponent } from "../Icon/MUIIcon";
 import LogoutButton from "../LoguotButton/LogoutButton";
+import { useAppSelector } from "@/store/store";
 
 type Props = {};
 
 function Sidebar({}: Props) {
   const currentRoute = usePathname();
+
+  const username = useAppSelector((state) => state.user.name);
 
   const renderItems = menuItems.map((item) => {
     return (
@@ -30,6 +33,7 @@ function Sidebar({}: Props) {
       <div className="sidebar-logo">Logo</div>
       <nav>{renderItems}</nav>
       <div className="sidebar-bottom">
+        {username}
         <LogoutButton />
       </div>
     </aside>
